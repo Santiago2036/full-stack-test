@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Persona } from './models/persona';
 import { Usuario } from './models/usuario';
+import { UsuarioLogin } from './models/usuarioLogin';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-  private URL = 'http://192.168.0.107:5286'
+  private URL = 'http://localhost:5286'
   private api = '/api/Usuario'
 
   constructor(private http: HttpClient) { }
@@ -32,5 +33,9 @@ export class UsuarioService {
 
   deleteUser(id:string){
     return(this.http.delete(`${this.URL}${this.api}/${id}`));
+  }
+
+  login(user : UsuarioLogin){
+    return(this.http.post(`${this.URL}${this.api}/login`, user)); 
   }
 }

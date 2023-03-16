@@ -26,4 +26,15 @@ export class ListUsersComponent implements OnInit{
       err => console.error(err)
       )
   }
+
+  handleDelete(id : any)
+  {
+    if (confirm("Estas seguro de eliminar Usuario?")){
+      this.usuarioService.deleteUser(id).subscribe(
+        res => {
+          console.log(res),
+          this.getUsers()
+        },
+        err => console.log(err))
+    }}
 }

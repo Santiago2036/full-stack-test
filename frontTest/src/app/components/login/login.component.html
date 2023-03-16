@@ -6,16 +6,16 @@
   <form class="m-3">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Usuario</label>
-    <input  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input minlength="8" required [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}"  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">Tu usuario es el email</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input  type="password" class="form-control" id="exampleInputPassword1">
+    <label  for="exampleInputPassword1" class="form-label">Password</label>
+    <input minlength="8" required [(ngModel)]="usuario.pass" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="m-3">
     <button routerLink="/" routerLinkActive="router-link-active"  class="btn btn-secondary float-start">Volver</button>
-    <button type="submit" class="btn btn-success float-end">Crear Usuario</button>
+    <button (click)="getLogin()" type="submit" class="btn btn-success float-end">Iniciar Sesion</button>
   </div>
 
 </form>

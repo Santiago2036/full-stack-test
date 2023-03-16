@@ -1,0 +1,9 @@
+input:valid,
+textarea:valid {
+    background: #DCFFD8;
+}
+
+input:invalid,
+textarea:invalid {
+    background: #FFF1F1;
+}

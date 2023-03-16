@@ -21,10 +21,10 @@
       <td>{{item.fecha_creacion}}</td>
 
       <td>
-        <button routerLink="/update" class="btn btn-primary btn-sm float-end">Update</button>
+        <button [routerLink]="['/update',item.idPersona]" class="btn btn-primary btn-sm float-end">Update</button>
       </td>
       <td>
-        <button class="btn btn-danger btn-sm float-end">Delete</button>
+        <button (click)="handleDelete(item.idPersona)" class="btn btn-danger btn-sm float-end">Delete</button>
       </td>
     </tr>
 

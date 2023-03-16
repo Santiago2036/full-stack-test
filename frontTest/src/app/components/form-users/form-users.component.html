@@ -6,17 +6,17 @@
 <form class="m-3">
   <div class="mb-3">
     <label for="nombres" class="form-label">Nombres</label>
-    <input [(ngModel)]="usuario.nombres" [ngModelOptions]="{standalone: true}" placeholder="Santiago..." type="text" class="form-control" id="nombres" aria-describedby="nombres">
+    <input minlength="8" required [(ngModel)]="usuario.nombres" [ngModelOptions]="{standalone: true}" placeholder="Santiago..." type="text" class="form-control" id="nombres" aria-describedby="nombres">
     <div id="emailHelp" class="form-text"></div>
   </div>
   <div class="mb-3">
     <label for="apellidos" class="form-label">Apellidos</label>
-    <input [(ngModel)]="usuario.apellidos" [ngModelOptions]="{standalone: true}" placeholder="Hernandez..." type="text" class="form-control" id="apellidos" aria-describedby="nombres">
+    <input minlength="8" required [(ngModel)]="usuario.apellidos" [ngModelOptions]="{standalone: true}" placeholder="Hernandez..." type="text" class="form-control" id="apellidos" aria-describedby="nombres">
     <div id="emailHelp" class="form-text"></div>
   </div>
   <div class="mb-3">
     <label for="identificacion" class="form-label">Numero identificacion</label>
-    <input [(ngModel)]="usuario.numero_identificacion" [ngModelOptions]="{standalone: true}" placeholder="123456789..." type="number" class="form-control" id="identificacion" aria-describedby="nombres">
+    <input minlength="8" required [(ngModel)]="usuario.numero_identificacion" [ngModelOptions]="{standalone: true}" placeholder="123456789..." type="number" class="form-control" id="identificacion" aria-describedby="nombres">
     <div id="emailHelp" class="form-text"></div>
   </div>
   <div class="mb-3">
@@ -29,16 +29,16 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input  minlength="8" required [(ngModel)]="usuario.email" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input [(ngModel)]="usuario.pass" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="exampleInputPassword1">
+    <label  for="exampleInputPassword1" class="form-label">Password</label>
+    <input  minlength="8" required  [(ngModel)]="usuario.pass" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3">
-    <label for="fecha_creacion" class="form-label">Fecha de creacion</label>
-    <input [(ngModel)]="usuario.fecha_creacion" [ngModelOptions]="{standalone: true}" type="date" class="form-control" id="fecha_creacion">
+    <label style="visibility:hidden" for="fecha_creacion" class="form-label">Fecha de creacion</label>
+    <input style="visibility:hidden" [(ngModel)]="usuario.fecha_creacion" [ngModelOptions]="{standalone: true}" type="datetime" class="form-control" id="fecha_creacion">
   </div>
   <div class="m-3">
     <button routerLink="/" routerLinkActive="router-link-active"  class="btn btn-secondary float-start">Volver</button>
@@ -49,7 +49,7 @@
       <button class="btn btn-success" (click)="edit ? handleUpdate():handleCreate()">UPDATE</button>
     </ng-template>
     <ng-template #save>
-      <button (clic)="handleCreate()" type="submit" class="btn btn-success float-end">Crear Usuario</button>
+      <button (click)="handleCreate()" type="submit" class="btn btn-success float-end">Crear Usuario</button>
     </ng-template>
 
   </div>
