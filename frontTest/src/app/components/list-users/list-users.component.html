@@ -1,0 +1,39 @@
+<div class="container col-md-12 text-center mt-3">
+  <h3>Listado de Usuarios</h3>
+</div>
+
+<table class="table table-hover mt-3">
+  <thead>
+    <tr>
+      <td><h6>Nombres</h6></td>
+      <td><h6>Apellidos</h6></td>
+      <td><h6>identificacion</h6></td>
+      <td><h6>Email</h6></td>
+      <td><h6>Fecha de creacion</h6></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listUsers">
+      <td>{{item.nombres}}</td>
+      <td>{{item.apellidos}}</td>
+      <td>{{item.numero_identificacion}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.fecha_creacion}}</td>
+
+      <td>
+        <button routerLink="/update" class="btn btn-primary btn-sm float-end">Update</button>
+      </td>
+      <td>
+        <button class="btn btn-danger btn-sm float-end">Delete</button>
+      </td>
+    </tr>
+
+
+  </tbody>
+
+</table>
+
+<div *ngIf="listUsers.length == 0" class="container col-md-12 text-center mt-10">
+  <h5>No hay usuarios registrados</h5>
+</div>
+
