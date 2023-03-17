@@ -1,0 +1,35 @@
+
+
+
+
+<ng-container *ngFor="let person of persons;let i = index">
+  <div class="col-md-6 " >
+
+    <div class="card text-center justify-content-between m-4">
+
+      <div class=" text-center card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        <p><b>{{personsKey[0]}}</b> : {{person.login}}</p>
+      </div>
+      <div  class="card-body">
+        <p><b>{{personsKey[1]}}</b> : {{person.id}}</p>
+        <p><b>{{personsKey[2]}}</b> : {{person.node_id}}</p>
+        <p><b>{{personsKey[3]}}</b>  : {{person.avatar_url}}</p>
+        <p><b>{{personsKey[4]}}</b> : {{person.gravatar_id}}</p>
+        <p><b>{{personsKey[5]}}</b> : {{person.html_url}}</p>
+        <p><b>{{personsKey[6]}}</b>  : {{person.followers_url}}</p>
+        <p><b>{{personsKey[7]}}</b>  : {{person.following_url}}</p>
+        <p><b>{{personsKey[8]}}</b>  : {{person.gists_url}}</p>
+        <p><b>{{personsKey[9]}}</b>  : {{person.starred_url}}</p>
+        <p><b>{{personsKey[10]}}</b> : {{person.subscriptions_url}}</p>
+        <p><b>{{personsKey[11]}}</b> : {{person.organizations_url}}</p>
+        <p><b>{{personsKey[12]}}</b> : {{person.repos_url}}</p>
+        <p><b>{{personsKey[13]}}</b> : {{person.events_url}}</p>
+        <p><b>{{personsKey[14]}}</b> : {{person.received_events_url}}</p>
+        <p><b>{{personsKey[15]}}</b> : {{person.type}}</p>
+        <p><b>{{personsKey[16]}}</b> : {{person.site_admin}}</p>
+        <p><b>{{personsKey[17]}}</b> : {{person.score}}</p>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
