@@ -52,3 +52,7 @@ Puedes correr la API realizada en ASP.NET y la base de datos de la siguiente man
 ```
 ```sh
     Despues de realizados estos pasos podemos acceder a la aplicacion por el puerto 8080 (http://localhost:8080)
+```
+```sh
+    Adicional a esto puede ver la prueba mediante este enlace: http://35.239.188.102:8080/
+```
